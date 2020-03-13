@@ -21,3 +21,7 @@ Route::get('/name/{a}/{b}', function($a,$b){
     echo "<br>ID: ".$b;
 });
 Route::get('/home', "HomeController@index");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
